@@ -18,3 +18,34 @@ body {
 
 
 
+.periodic-table {
+  display: grid;
+  gap: 1px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  display: grid; 
+  grid-template-columns: repeat(18, 1fr);
+  width: fit-content;
+}
+
+.element {
+
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  height: 80px;
+  width: 70px;
+}
+
+.centerBox{
+  background: #000;
+  grid-column: 3/13;
+  grid-row: 1/4;
+}
+
+
+.rightBar{
+  background: #a80000;
+  grid-column: 13/18;
+  grid-row: 1;
+}
+ 
