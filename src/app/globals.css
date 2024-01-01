@@ -18,9 +18,9 @@ body {
 
 
 
-.periodic-table {
+.periodicTable {
   display: grid;
-  gap: 1px;
+  gap: 2px;
   margin: 10px auto;
   border: 1px solid #ccc;
   display: grid; 
@@ -28,24 +28,54 @@ body {
   width: fit-content;
 }
 
-.element {
 
-  border: 1px solid #ccc;
-  background-color: #f0f0f0;
-  height: 80px;
-  width: 70px;
-}
 
-.centerBox{
+.periodicTable .centerBox{
   background: #000;
   grid-column: 3/13;
   grid-row: 1/4;
 }
 
 
-.rightBar{
+.periodicTable  .rightBar{
   background: #a80000;
   grid-column: 13/18;
   grid-row: 1;
+}
+ 
+.periodicTable .element {
+
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  padding: 1px;
+}
+ .periodicTable .element .topBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+.periodicTable .element .atomicNumber{
+font-size: 11px;
+font-weight: 700;
+}
+.periodicTable .element .symbol{
+  flex: 1;
+ 
+  display: flex;
+  align-items: center;
+  align-self: center;
+  font-size: 25px;
+  font-weight: 700;
+}
+.periodicTable .element .name{
+  font-size: 11px;
+  text-align: center;
+}
+.periodicTable .element .atomicWeight{
+font-size: 10px;
 }
  
