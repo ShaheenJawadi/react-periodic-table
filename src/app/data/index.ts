@@ -1,5 +1,18 @@
 import { ElementDataType } from "../types";
-
+export const categoryColors = {
+    'diatomic nonmetal': '#ffcc00',
+    'noble gas': '#0099cc',
+    'alkali metal': '#cc0000',
+    'alkaline earth metal': '#ff9900',
+    'metalloid': '#9966cc',
+    'polyatomic nonmetal': '#66cc66',
+    'post-transition metal': '#3399ff',
+    'transition metal': '#ff6666',
+    'lanthanide': '#cc99ff',
+    'actinide': '#ff33cc',
+    'unknown': '#999999',
+  };
+  
 export const elementsData:ElementDataType[] =[
     {
         "name": "Hydrogen",

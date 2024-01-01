@@ -3,6 +3,7 @@ import styles from './page.module.css'
 import { ElementDataType } from './types'
 import { elementsData } from './data'
 import { SingleElement } from './components/element'
+import KeyBox from './components/KeyBox'
 
 export default function Home() {
 
@@ -19,7 +20,14 @@ export default function Home() {
             )
           })
         }
-        <div className='centerBox'>
+        <div className='keyBox'>
+       
+            <KeyBox/>
+
+ 
+          
+
+          
  
         </div>
 

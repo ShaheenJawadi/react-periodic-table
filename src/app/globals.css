@@ -15,14 +15,15 @@ body {
 }
 
 
-
+body{
+  background: #1e1e1e;
+}
 
 
 .periodicTable {
   display: grid;
   gap: 2px;
-  margin: 10px auto;
-  border: 1px solid #ccc;
+  margin: 10px auto; 
   display: grid; 
   grid-template-columns: repeat(18, 1fr);
   width: fit-content;
@@ -30,28 +31,57 @@ body {
 
 
 
-.periodicTable .centerBox{
-  background: #000;
+.periodicTable .keyBox{
+ 
   grid-column: 3/13;
   grid-row: 1/4;
 }
 
+.periodicTable .keyBox .categories{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+ 
+  height: 150px;
+ 
+}
+
+.periodicTable .keyBox .categories .single{
+  display: flex;
+  align-items: center;
+  color: #fff;
+
+}
+.periodicTable .keyBox .categories .single .categoryColor{
+  height: 15px;
+  width: 15px;
+  border-radius: 3px;
+  margin: 5px;
+
+}
+.periodicTable .keyBox .categories .single .category{
+
+}
+
 
 .periodicTable  .rightBar{
-  background: #a80000;
+ 
   grid-column: 13/18;
   grid-row: 1;
 }
  
 .periodicTable .element {
 
-  border: 1px solid #ccc;
-  background-color: #f0f0f0;
+ 
   height: 80px;
   width: 80px;
   display: flex;
   flex-direction: column;
   padding: 1px;
+  background: #999999;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
 }
  .periodicTable .element .topBox{
   display: flex;

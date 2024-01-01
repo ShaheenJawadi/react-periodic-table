@@ -1,3 +1,4 @@
+import { categoryColors } from "../data";
 import { ElementDataType } from "../types";
 
 
@@ -10,25 +11,12 @@ export const SingleElement=(props:Props)=>{
     const { element}=props
  
  
-    const categoryColors = {
-      'diatomic nonmetal': '#ffcc00',
-      'noble gas': '#0099cc',
-      'alkali metal': '#cc0000',
-      'alkaline earth metal': '#ff9900',
-      'metalloid': '#9966cc',
-      'polyatomic nonmetal': '#66cc66',
-      'post-transition metal': '#3399ff',
-      'transition metal': '#ff6666',
-      'lanthanide': '#cc99ff',
-      'actinide': '#ff33cc',
-      'unknown': '#999999',
-    };
-    
+
  
  
 
     return(
-        <div style={{gridColumn:element.xpos,gridRow:element.ypos , background:categoryColors[element.category || 'unknown' ]}} className={`element ${element.category}`} >
+        <div style={{gridColumn:element.xpos,gridRow:element.ypos , background:categoryColors[element.category]}} className={`element ${element.category}`} >
 
           <div className="topBox">
             <div className="atomicNumber">
