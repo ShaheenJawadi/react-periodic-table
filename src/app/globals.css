@@ -62,7 +62,23 @@ body{
 .periodicTable .keyBox .categories .single .category{
 
 }
-
+.periodicTable .keyBox  .matterPhase{
+  display: flex;
+}
+.periodicTable .keyBox  .btmContainer{
+  display: flex;
+}
+.periodicTable .keyBox  .btmContainer .section{
+  margin: 0 15px;
+}
+.periodicTable .keyBox  .matterPhase .single{
+  margin: 4px;
+}
+.periodicTable .keyBox  .title{
+  color: #fff;
+  margin-bottom: 10px;
+  display: block;
+}
 
 .periodicTable  .rightBar{
  

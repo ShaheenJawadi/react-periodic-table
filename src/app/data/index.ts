@@ -13,6 +13,11 @@ export const categoryColors = {
     'unknown': '#999999',
   };
   
+export const matterPhase={
+    'Solid': '#fff',
+    'Liquid': '#0066cc',
+    'Gas': '#e40e0e',
+}  
 export const elementsData:ElementDataType[] =[
     {
         "name": "Hydrogen",

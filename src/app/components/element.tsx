@@ -1,4 +1,4 @@
-import { categoryColors } from "../data";
+import { categoryColors, matterPhase } from "../data";
 import { ElementDataType } from "../types";
 
 
@@ -31,7 +31,7 @@ export const SingleElement=(props:Props)=>{
             {element.symbol}
           </div>
 
-          <div className="name">
+          <div className="name" style={{color:matterPhase[element.phase]}} >
           {element.name}
           </div>
 
