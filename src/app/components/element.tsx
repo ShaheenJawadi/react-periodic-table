@@ -34,6 +34,9 @@ export const SingleElement=(props:Props)=>{
           <div className="name" style={{color:matterPhase[element.phase]}} >
           {element.name}
           </div>
+          <div className="shells">
+          {element.shells.join('-')}
+          </div>
 
       
         

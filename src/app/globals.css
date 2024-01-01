@@ -62,6 +62,9 @@ body{
 .periodicTable .keyBox .categories .single .category{
 
 }
+.periodicTable .keyBox .categories .single .category:first-letter {
+  text-transform: uppercase;
+}
 .periodicTable .keyBox  .matterPhase{
   display: flex;
 }
@@ -119,6 +122,10 @@ font-weight: 700;
 }
 .periodicTable .element .name{
   font-size: 11px;
+  text-align: center;
+}
+.periodicTable .element .shells{
+  font-size: 7px;
   text-align: center;
 }
 .periodicTable .element .atomicWeight{
