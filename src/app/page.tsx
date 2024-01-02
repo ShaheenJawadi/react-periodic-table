@@ -1,9 +1,12 @@
+"use client"
 import Image from 'next/image'
 import styles from './page.module.css'
 import { ElementDataType } from './types'
 import { elementsData } from './data'
 import { SingleElement } from './components/element'
 import KeyBox from './components/KeyBox'
+import { DisplayValuesProvider } from './context/DisplayContext'
+import DisplayMode from './components/displayMode'
 
 export default function Home() {
 
@@ -11,32 +14,35 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <div  className="periodicTable" >
-        {
-          elementsData.map((item , index)=>{
-            return(
-              <SingleElement element={item}/>
-                
-            )
-          })
-        }
-        <div className='keyBox'>
-       
-            <KeyBox/>
-
- 
-          
-
-          
- 
-        </div>
-
-        <div className='rightBar'>
+      <DisplayValuesProvider>
+        
       
-        </div>
-   
-      </div>
+        <div  className="periodicTable" >
+          {
+            elementsData.map((item , index)=>{
+              return(
+                <SingleElement element={item}/>
+                  
+              )
+            })
+          }
+          <div className='keyBox'>
+        
+              <KeyBox/>
 
+  
+            
+
+            
+  
+          </div>
+
+          <div className='displayMode'>
+          <DisplayMode/>
+          </div>
+    
+        </div>
+      </DisplayValuesProvider>
     </main>
   )
 }

@@ -16,7 +16,7 @@ body {
 
 
 body{
-  background: #1e1e1e;
+  background: #181d25;
 }
 
 
@@ -42,7 +42,7 @@ body{
   flex-wrap: wrap;
   flex-direction: column;
  
-  height: 150px;
+  height: 100px;
  
 }
 
@@ -50,6 +50,7 @@ body{
   display: flex;
   align-items: center;
   color: #fff;
+  cursor: pointer;
 
 }
 .periodicTable .keyBox .categories .single .categoryColor{
@@ -60,6 +61,7 @@ body{
 
 }
 .periodicTable .keyBox .categories .single .category{
+  font-size: 14px;
 
 }
 .periodicTable .keyBox .categories .single .category:first-letter {
@@ -76,6 +78,7 @@ body{
 }
 .periodicTable .keyBox  .matterPhase .single{
   margin: 4px;
+  cursor: pointer;
 }
 .periodicTable .keyBox  .title{
   color: #fff;
@@ -83,7 +86,7 @@ body{
   display: block;
 }
 
-.periodicTable  .rightBar{
+.periodicTable  .displayMode{
  
   grid-column: 13/18;
   grid-row: 1;
@@ -117,7 +120,7 @@ font-weight: 700;
   display: flex;
   align-items: center;
   align-self: center;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: 700;
 }
 .periodicTable .element .name{
@@ -132,3 +135,4 @@ font-weight: 700;
 font-size: 10px;
 }
  
+
