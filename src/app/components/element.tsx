@@ -1,5 +1,7 @@
+import { useDisplaytValues } from "../context/useContext";
 import { categoryColors, matterPhase } from "../data";
 import { ElementDataType } from "../types";
+import { elemntBg } from "../utils";
 
 
 type Props ={
@@ -8,7 +10,8 @@ type Props ={
 
 export const SingleElement=(props:Props)=>{
 
-    const { element}=props
+    const { element}=props ; 
+    const {displayTable }=useDisplaytValues()
  
  
 
@@ -16,7 +19,7 @@ export const SingleElement=(props:Props)=>{
  
 
     return(
-        <div style={{gridColumn:element.xpos,gridRow:element.ypos , background:categoryColors[element.category]}} className={`element ${element.category}`} >
+        <div style={{gridColumn:element.xpos,gridRow:element.ypos , background:elemntBg(displayTable , element)}} className={`element ${element.category}`} >
 
           <div className="topBox">
             <div className="atomicNumber">
