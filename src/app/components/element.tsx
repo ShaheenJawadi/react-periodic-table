@@ -20,7 +20,7 @@ export const SingleElement=(props:Props)=>{
     return(
         <div style={{gridColumn:element.xpos,gridRow:element.ypos  }} >
           {
-            displayTable=="image" ?
+            displayTable.section=="image" ?
             
             <img src={element.image.url} 
               alt={element.image.title} 

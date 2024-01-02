@@ -1,18 +1,27 @@
 import { createContext, useState, ReactNode  } from 'react'
  
  
- type DisplayData = {
-  displayTable: string,
+ export type DisplayTable ={
+  section:string , 
+  paramesters?:number|string ;
 }
+
+ type DisplayData = {
+
+  displayTable:DisplayTable ,
+}
+
 const initialDisplayData: DisplayData = {
-  displayTable:"groupe"
+  displayTable:{
+    section:"group_block",
+  }
 }
  
 
 
 export type DisplayContextValue={
-  displayTable:string , 
-  setDisplayTable:(d:string)=>void
+  displayTable:DisplayTable , 
+  setDisplayTable:(d:DisplayTable)=>void
 }
 
 export const DisplayDataContext = createContext<DisplayContextValue>({
@@ -29,7 +38,7 @@ interface Props {
 
 export const DisplayValuesProvider = ({ children }: Props) => {
  
-  const [displayTable, setDisplayTable] = useState<string>(initialDisplayData.displayTable)
+  const [displayTable, setDisplayTable] = useState<DisplayTable>(initialDisplayData.displayTable)
 
  
  
