@@ -26,15 +26,8 @@ export default function Home() {
               )
             })
           }
-          <div className='keyBox'>
-        
+          <div className='keyBox'>  
               <KeyBox/>
-
-  
-            
-
-            
-  
           </div>
 
           <div className='displayMode'>
