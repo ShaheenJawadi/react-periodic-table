@@ -1,5 +1,5 @@
 import { DisplayTable } from "../context/DisplayContext";
-import { categoryColors } from "../data";
+import { categoryColors, matterPhase } from "../data";
 import { ElementDataType } from "../types";
 
 
@@ -13,20 +13,31 @@ export const elemntBg=( display:DisplayTable , element:ElementDataType)=>{
     else if(display.section=="temperature"){
         if(element.boil !=null &&  element.boil as number <= (display.paramesters as number)){
     
-            return "#ffcc00" 
+            return matterPhase["Gas"]; 
+
 
         }
         else if(element.melt !=null && element.melt as number <=(display.paramesters as number)){
        
-            return "#66ccff"
+            return matterPhase["Liquid"]; 
+
         }
         else if(element.melt == null && element.boil==null){
             return
         }
         else {
-            return "#3366cc"; 
+            return matterPhase["Solid"]; 
         }
     }
     else
         return  categoryColors[element.category] ; 
+}
+
+export const tempConversion =(k:number , to :"C" |"F")=>{
+
+    const c = k - 273.15
+    if(to=="C")
+        return  c.toFixed(3)
+    return (c * 9/5 + 32).toFixed(3)
+
 }

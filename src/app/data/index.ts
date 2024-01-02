@@ -14,9 +14,9 @@ export const categoryColors = {
   };
   
 export const matterPhase={
-    'Solid': '#fff',
-    'Liquid': '#0066cc',
-    'Gas': '#e40e0e',
+    'Solid': '#3366cc',
+    'Liquid': '#66ccff',
+    'Gas': '#ffcc00',
 }  
 export const elementsData:ElementDataType[] =[
     {
