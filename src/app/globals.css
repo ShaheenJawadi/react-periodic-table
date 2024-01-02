@@ -35,6 +35,7 @@ body{
  
   grid-column: 3/13;
   grid-row: 2/4;
+  padding: 10px;
 }
 
 .periodicTable .keyBox .categories{
@@ -69,9 +70,14 @@ body{
 }
 .periodicTable .keyBox  .matterPhase{
   display: flex;
+  place-content: center;
+  margin-bottom: 15px;
 }
 .periodicTable .keyBox  .btmContainer{
   display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 .periodicTable .keyBox  .btmContainer .section{
   margin: 0 15px;
@@ -79,6 +85,29 @@ body{
 .periodicTable .keyBox  .matterPhase .single{
   margin: 4px;
   cursor: pointer;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  ALIGN-ITEMS: CENTER;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  border-radius: 8px;
+}
+.periodicTable .keyBox   .currentTemp {
+  display: flex;
+}
+.periodicTable .keyBox   .currentTemp .single {
+  color: #fff;
+  font-size: 20px;
+  margin: 0 15px;
+}
+.periodicTable .keyBox   .currentTemp .single:nth-of-type(2){
+ 
+  padding: 0 15px;
+  border-right: 1px solid #999999;
+  border-left: 1px solid #999999;
 }
 .periodicTable .keyBox  .title{
   color: #fff;
