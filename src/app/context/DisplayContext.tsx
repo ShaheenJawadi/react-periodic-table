@@ -3,7 +3,6 @@ import { createContext, useState, ReactNode  } from 'react'
  
  type DisplayData = {
   displayTable: string,
-
 }
 const initialDisplayData: DisplayData = {
   displayTable:"groupe"

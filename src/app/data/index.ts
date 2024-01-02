@@ -3428,7 +3428,7 @@ export const elementsData:ElementDataType[] =[
         "cpk_hex": "a3ffc7",
         "image": {
             "title": "Photomontage of what promethium metal might look like (it is too radioactive and real images are not available)",
-            "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Promethium.jpg",
+            "url": "https://images-of-elements.com/promethium.jpg",
             "attribution": "Unknown authorUnknown author, CC BY 3.0 <https://creativecommons.org/licenses/by/3.0>, via Wikimedia Commons, source: https://images-of-elements.com/promethium.php"
         },
         "block": "f"
