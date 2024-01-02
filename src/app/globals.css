@@ -34,7 +34,7 @@ body{
 .periodicTable .keyBox{
  
   grid-column: 3/13;
-  grid-row: 1/4;
+  grid-row: 2/4;
 }
 
 .periodicTable .keyBox .categories{
@@ -88,10 +88,58 @@ body{
 
 .periodicTable  .displayMode{
  
-  grid-column: 13/18;
+  grid-column: 2/18;
   grid-row: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.periodicTable  .displayMode .sliderMode{
+  display: flex;
+  align-items: center;
+
+}
+.slider {
+  -webkit-appearance: none;
+  width: 500px;
+  height: 15px;
+  border-radius: 5px;
+  background: rgb(0,22,255);
+background: linear-gradient(90deg, rgba(0,22,255,1) 0%, rgba(255,0,0,1) 100%);
+  outline: none; 
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  
 }
  
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  cursor: pointer;
+}
+.periodicTable  .displayMode .sliderMode .radioLabel{
+  color: #fff;
+  font-size: 16px;
+  display: block;
+  margin: 5px;
+}
+
+.periodicTable  .displayMode .sliderMode .radioLabel input {
+  margin-right: 5px;
+}
+
+
 .periodicTable .element {
 
  
@@ -104,6 +152,7 @@ body{
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
+  border: 1px solid #cecccc42;
 }
  .periodicTable .element .topBox{
   display: flex;

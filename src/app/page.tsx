@@ -7,6 +7,7 @@ import { SingleElement } from './components/element'
 import KeyBox from './components/KeyBox'
 import { DisplayValuesProvider } from './context/DisplayContext'
 import DisplayMode from './components/displayMode'
+import SliderMode from './components/sliderMode'
 
 export default function Home() {
 
@@ -31,7 +32,8 @@ export default function Home() {
           </div>
 
           <div className='displayMode'>
-          <DisplayMode/>
+            <SliderMode/>
+            <DisplayMode/>
           </div>
     
         </div>

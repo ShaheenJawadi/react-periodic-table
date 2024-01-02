@@ -41,7 +41,7 @@ const KeyBox=()=> {
                   <div  onClick={()=>setDisplayTable({section:"category" , paramesters:key})} className="single">
                     <div className="categoryColor" style={{ background:categoryColors[key]}}></div>
                     <div className="category">{key}</div>
-                  
+               
                   </div>
                   
                 )}
