@@ -13,7 +13,7 @@ const options = [
 const DisplayMode = () =>{
     const  {setDisplayTable}=useDisplaytValues()
     return (
-            <Select options={options} onChange={(value)=>setDisplayTable({paramesters:value?.value , section:value?.value})} />
+            <Select className='dropdown' options={options} onChange={(value)=>setDisplayTable({paramesters:value?.value , section:value?.value})} />
         )
 }
 export default DisplayMode ; 

@@ -123,6 +123,9 @@ body{
   justify-content: space-between;
   align-items: center;
 }
+.periodicTable  .displayMode .dropdown{
+  min-width: 250px;
+}
 .periodicTable  .displayMode .sliderMode{
   display: flex;
   align-items: center;
