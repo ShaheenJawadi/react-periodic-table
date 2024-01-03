@@ -11,12 +11,13 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+ /*  overflow-x: hidden; */
 }
 
 
 body{
   background: #181d25;
+  position: relative;
 }
 
 
@@ -217,3 +218,17 @@ font-size: 10px;
 }
  
 
+
+
+.DrawerContainer{
+  min-height: 300px;
+  background: #181d25de;
+  position: sticky;
+
+  right: 0;
+  z-index: 9999;
+  width: 100%;
+  position: -webkit-sticky;
+
+  bottom: 0;
+}

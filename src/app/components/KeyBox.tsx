@@ -15,20 +15,20 @@ const KeyBox=()=> {
       {
         displayTable.section=="" || displayTable.section=="group_block" ?
           <div className="section">
-        <span className="title" >Categories  <small>(color of background)</small></span>
-          <div className="categories">
-                {Object.keys(categoryColors).map(key => 
-                  {return(
-                    <div  onClick={()=>setDisplayTable({section:"category" , paramesters:key})} className="single">
-                      <div className="categoryColor" style={{ background:categoryColors[key]}}></div>
-                      <div className="category">{key}</div>
-                
-                    </div>
-                    
+            <span className="title" >Categories  <small>(color of background)</small></span>
+            <div className="categories">
+                  {Object.keys(categoryColors).map(key => 
+                    {return(
+                      <div  onClick={()=>setDisplayTable({section:"category" , paramesters:key})} className="single">
+                        <div className="categoryColor" style={{ background:categoryColors[key]}}></div>
+                        <div className="category">{key}</div>
+                  
+                      </div>
+                      
+                    )}
                   )}
-                )}
 
-          </div>
+            </div>
         </div>
         : displayTable.section=="temperature" ?
         <div className="section">

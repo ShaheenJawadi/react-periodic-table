@@ -8,6 +8,7 @@ import KeyBox from './components/KeyBox'
 import { DisplayValuesProvider } from './context/DisplayContext'
 import DisplayMode from './components/displayMode'
 import SliderMode from './components/sliderMode'
+import BottomDrawer from './components/drawer'
 
 export default function Home() {
 
@@ -17,6 +18,7 @@ export default function Home() {
     <main className={styles.main}>
       <DisplayValuesProvider>
         
+        <>
       
         <div  className="periodicTable" >
           {
@@ -37,6 +39,8 @@ export default function Home() {
           </div>
     
         </div>
+        <BottomDrawer/>
+        </>
       </DisplayValuesProvider>
     </main>
   )

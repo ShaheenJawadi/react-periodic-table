@@ -43,7 +43,7 @@ export const SingleElement=(props:Props)=>{
               {element.symbol}
             </div>
 
-            <div className="name" style={{color:matterPhase[element.phase]}} >
+            <div className="name"  >
             {element.name}
             </div>
             <div className="shells">
