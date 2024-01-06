@@ -1,7 +1,6 @@
 :root {
 
 }
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -176,8 +175,8 @@ background: linear-gradient(90deg, rgba(0,22,255,1) 0%, rgba(255,0,0,1) 100%);
 .periodicTable .element {
 
  
-  height: 80px;
-  width: 80px;
+  height: 75px;
+  width: 70px;
   display: flex;
   flex-direction: column;
   padding: 1px;

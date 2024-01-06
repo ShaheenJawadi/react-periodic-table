@@ -46,9 +46,9 @@ export const SingleElement=(props:Props)=>{
             <div className="name"  >
             {element.name}
             </div>
-            <div className="shells">
+            {/* <div className="shells">
             {element.shells.join('-')}
-            </div>
+            </div> */}
 
             </div>  
           }
