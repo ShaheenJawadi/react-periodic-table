@@ -1,4 +1,4 @@
-import { createContext, useState, ReactNode  } from 'react'
+import { createContext, useState, ReactNode, useEffect  } from 'react'
 import { ElementDataType } from '../types'
  
  
@@ -59,17 +59,16 @@ export const DisplayValuesProvider = ({ children }: Props) => {
   const [showDrawer, setShowDrawer] = useState<boolean>(initialDisplayData.showDrawer)
   const [drawerData, setDrawerData] = useState<ElementDataType|null>(initialDisplayData.drawerData)
 
-  const closeDrawer=()=>{
+  const closeDrawer=()=>{ 
     setDrawerData(null);
     setShowDrawer(false);
 
   }
-  const openDrawer=(e:ElementDataType)=>{
+  const openDrawer=(e:ElementDataType)=>{ 
     setDrawerData(e);
     setShowDrawer(true);
 
   }
-
  
  
 

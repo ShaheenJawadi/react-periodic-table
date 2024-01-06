@@ -1,22 +1,22 @@
-"use client"
-import Image from 'next/image'
-import styles from './page.module.css'
-import { ElementDataType } from './types'
+"use client" 
+import styles from './page.module.css' 
 import { elementsData } from './data'
 import { SingleElement } from './components/element'
 import KeyBox from './components/KeyBox'
-import { DisplayValuesProvider } from './context/DisplayContext'
+
 import DisplayMode from './components/displayMode'
 import SliderMode from './components/sliderMode'
 import BottomDrawer from './components/drawer'
+import { useDisplaytValues } from './context/useContext'
+ 
 
 export default function Home() {
 
+  let { showDrawer } = useDisplaytValues();
  
-
   return (
     <main className={styles.main}>
-      <DisplayValuesProvider>
+
         
         <>
       
@@ -24,7 +24,7 @@ export default function Home() {
           {
             elementsData.map((item , index)=>{
               return(
-                <SingleElement element={item}/>
+                <SingleElement key={index} element={item}/>
                   
               )
             })
@@ -38,10 +38,11 @@ export default function Home() {
             <DisplayMode/>
           </div>
     
-        </div>
-        <BottomDrawer/>
+        </div> 
+          {showDrawer && <BottomDrawer />  }
+
         </>
-      </DisplayValuesProvider>
+  
     </main>
   )
 }

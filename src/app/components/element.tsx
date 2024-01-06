@@ -10,7 +10,7 @@ type Props ={
 export const SingleElement=(props:Props)=>{
 
     const { element}=props ; 
-    const {displayTable }=useDisplaytValues()
+    const {displayTable ,openDrawer }=useDisplaytValues()
  
  
 
@@ -18,7 +18,7 @@ export const SingleElement=(props:Props)=>{
  
 
     return(
-        <div style={{gridColumn:element.xpos,gridRow:element.ypos  }} >
+      <div onClick={() => openDrawer(element)} style={{gridColumn:element.xpos,gridRow:element.ypos  }} >
           {
             displayTable.section=="image" ?
             
@@ -46,10 +46,7 @@ export const SingleElement=(props:Props)=>{
             <div className="name"  >
             {element.name}
             </div>
-            {/* <div className="shells">
-            {element.shells.join('-')}
-            </div> */}
-
+ 
             </div>  
           }
           

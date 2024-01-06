@@ -1,10 +1,12 @@
+"use client"
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { DisplayValuesProvider } from './context/DisplayContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
+ const metadata: Metadata = {
   title: 'React Periodic Table',
   description: '',
 }
@@ -16,7 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <DisplayValuesProvider> 
+          {children}
+        </DisplayValuesProvider>
+       </body>
     </html>
   )
 }

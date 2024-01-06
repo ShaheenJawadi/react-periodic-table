@@ -219,7 +219,7 @@ font-size: 10px;
 
 
 
-.DrawerContainer{
+.drawerContainer{
   min-height: 300px;
   background: #181d25de;
   position: sticky;
@@ -230,4 +230,25 @@ font-size: 10px;
   position: -webkit-sticky;
 
   bottom: 0;
+  padding: 5px;
+}
+.drawerContainer .drawerHeader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.drawerContainer .drawerHeader .name{
+  flex: 1;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+}
+.drawerContainer .drawerHeader .close{
+  padding: 8px;
+  cursor: pointer;
+  color: #e60101;
+  font-weight: 800;
+  font-size: 18px;
+  
 }
