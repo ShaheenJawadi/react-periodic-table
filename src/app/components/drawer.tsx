@@ -19,19 +19,30 @@ const BottomDrawer=()=>{
         <div  className="drawerContainer">
             <div className='drawerHeader' >
                 <div className='name' >
-                    name
+                    {drawerData?.name}
                 </div>
                 <div onClick={() => closeDrawer()} className='close'>X</div>
 
             </div>
          
-         <div className='content' >
+            <div className='content' >
+                    <div className='model3d' >
+                    <model-viewer min-field-of-view="1deg" alt="qdqsd" src={drawerData?.bohr_model_3d} 
+                        shadow-intensity="0" rotation-per-second="60deg"  camera-controls  >
+                        </model-viewer>
 
-         </div>
-            {/* <model-viewer alt="qdqsd" src="https://storage.googleapis.com/search-ar-edu/periodic-table/element_001_hydrogen/element_001_hydrogen.glb" ar    
-            shadow-intensity="1" camera-controls touch-action="pan-y">
+                    </div>
+                    <div className='elementData' >
+                        data
+                    </div>
+                    <div className='elementImage' >
+                        <img src={drawerData?.image.url} alt={drawerData?.image?.attribution} />
 
-            </model-viewer> */}
+                    </div>
+                
+
+            </div>
+           
         
         
         </div>

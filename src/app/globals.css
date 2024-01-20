@@ -252,3 +252,19 @@ font-size: 10px;
   font-size: 18px;
   
 }
+
+.drawerContainer .content{
+  display: flex;
+}
+.drawerContainer .content .model3d model-viewer {
+  height: 200px;
+  width: 350px;
+}
+.drawerContainer .content .elementData {
+  flex: 1;
+}
+.drawerContainer .content .elementImage img {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+}
