@@ -208,10 +208,7 @@ font-weight: 700;
   font-size: 11px;
   text-align: center;
 }
-.periodicTable .element .shells{
-  font-size: 7px;
-  text-align: center;
-}
+ 
 .periodicTable .element .atomicWeight{
 font-size: 10px;
 }
@@ -220,7 +217,7 @@ font-size: 10px;
 
 
 .drawerContainer{
-  min-height: 300px;
+  min-height: 250px;
   background: var(--drawerBg);
   position: sticky;
 
@@ -258,17 +255,78 @@ font-size: 10px;
 .drawerContainer .content .elementData {
   flex: 1;
   max-height: 250px;
-  overflow-y: scroll;
+  overflow-y: scroll; 
 }
 
-.drawerContainer .content .elementData .name {
-  flex: 1;
+.drawerContainer .content .elementData .elementName {
+ 
   font-size: 20px;
-  text-align: center;
+  margin: 0px 5px;
   font-weight: 700;
   color: #fff;
 }
+.drawerContainer .content .elementData .elementBoxName{
+  display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+.drawerContainer .content .elementData .elemntSummary{
+ 
+    margin-top: 10px;
+   
+}
+ 
 
+.drawerContainer .content .elementData .elementBoxName .element  {
+
+
+  height: 80px;
+  width: 80px;
+  flex-basis: 80px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1px;
+  background: #999999;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #cecccc42;
+}
+
+.drawerContainer .content .elementData .elementBoxName .element  .topBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    font-size: 10px;
+      font-weight: 700;
+}
+ 
+
+.drawerContainer .content .elementData .elementBoxName .element  .symbol {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  align-self: center;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.drawerContainer .content .elementData .elementBoxName .element  .name {
+  font-size: 12px;
+  text-align: center;
+}
+
+ 
+
+
+
+.drawerContainer .content .elementData .elemntSummary .summary{
+color: #fff;
+margin-left: 12px;
+}
 
 .drawerContainer .content .elementImage img {
   width: 200px;

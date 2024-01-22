@@ -3,7 +3,7 @@ import { categoryColors, matterPhase } from "../data";
 import { ElementDataType } from "../types";
 
 
-export const elemntBg=( display:DisplayTable , element:ElementDataType)=>{
+export const elemntBg=( display:DisplayTable  , element:ElementDataType)=>{
     if(display.section =="cpx"){
         return"#" +element.cpk_hex;
     }
