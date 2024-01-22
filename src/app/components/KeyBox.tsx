@@ -11,15 +11,15 @@ const KeyBox=()=> {
 
   return (
     <div className="btmContainer">
- 
+      
       {
-        displayTable.section=="" || displayTable.section=="group_block" ?
+        displayTable.section == "" || displayTable.section == "category" || displayTable.section=="group_block" ?
           <div className="section">
             <span className="title" >Categories  <small>(color of background)</small></span>
             <div className="categories">
-                  {Object.keys(categoryColors).map(key => 
+                  {Object.keys(categoryColors).map((key , index) => 
                     {return(
-                      <div  onClick={()=>setDisplayTable({section:"category" , paramesters:key})} className="single">
+                      <div  key={index} onClick={()=>setDisplayTable({section:"category" , paramesters:key})} className="single">
                         <div className="categoryColor" style={{ background:categoryColors[key]}}></div>
                         <div className="category">{key}</div>
                   

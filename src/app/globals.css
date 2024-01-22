@@ -218,6 +218,7 @@ font-size: 10px;
 
 .drawerContainer{
   min-height: 250px;
+  max-height: 300px;
   background: var(--drawerBg);
   position: sticky;
 
@@ -249,13 +250,14 @@ font-size: 10px;
   display: flex;
 }
 .drawerContainer .content .model3d model-viewer {
-  height: 200px;
+  height: 100%;
+  min-height: 100%;
   width: 350px;
 }
 .drawerContainer .content .elementData {
   flex: 1;
-  max-height: 250px;
-  overflow-y: scroll; 
+  max-height: 300px;
+  overflow-y: auto; 
 }
 
 .drawerContainer .content .elementData .elementName {
@@ -345,4 +347,11 @@ margin-left: 12px;
   width: 200px;
   height: 200px;
   border-radius: 5px;
+}
+
+.drawerContainer .content .elementImage .title {
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  max-width: 190px;
 }

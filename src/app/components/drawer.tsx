@@ -19,33 +19,40 @@ const BottomDrawer=()=>{
         {
             title: "Category",
             value: "category",
-        }, {
-        title:"Group" , 
-            value:"group",
-    }, {
-            title: "Period",
-            value: "period",
-        }, {
-            title: "Block",
-            value: "block",
-        }, {
+        }, 
+        {
+            title: "Melting point",
+            value: "melt",
+        },
+        {
             title: "Atomic number",
             value: "number",
         }, {
-            title: "Electron configuration",
-            value: "electron_configuration_semantic",
-        }, {
-            title: "Melting point",
-            value: "melt",
-        }, {
+        title:"Group" , 
+            value:"group",
+    }, 
+        {
             title: "Boiling point",
             value: "boil",
-        }, {
+        }, 
+        {
+            title: "Electron configuration",
+            value: "electron_configuration_semantic",
+        },
+        {
+            title: "Period",
+            value: "period",
+        },  {
             title: "State at 20°C",
             value: "phase",
-        }, {
+        },
+       {
             title: "Atomic mass",
             value: "atomic_mass",
+        },
+        {
+            title: "Block",
+            value: "block",
         }, {
             title: "Density",
             value: "density",
@@ -58,6 +65,9 @@ const BottomDrawer=()=>{
             <div className='content' >
                 <div className='elementImage' >
                     <img src={drawerData?.image.url} alt={drawerData?.image?.attribution} />
+                    <div className='title'>
+                        {drawerData?.image.title} 
+                    </div>
 
                 </div>
                     <div className='elementData' >
