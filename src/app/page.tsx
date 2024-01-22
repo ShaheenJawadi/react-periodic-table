@@ -8,16 +8,17 @@ import DisplayMode from './components/displayMode'
 import SliderMode from './components/sliderMode'
 import BottomDrawer from './components/drawer'
 import { useDisplaytValues } from './context/useContext'
- 
+import PerfectScrollbar from 'react-perfect-scrollbar'
+import "react-perfect-scrollbar/dist/css/styles.css";
 export default function Home() {
 
   let { showDrawer } = useDisplaytValues();
  
   return (
-    <main className={styles.main}>
+    <main className="container">
 
        
-    
+      <PerfectScrollbar  >
       
         <div  className="periodicTable" >
           {
@@ -38,9 +39,10 @@ export default function Home() {
           </div>
     
         </div> 
+     
           {showDrawer && <BottomDrawer />  }
  
-
+      </PerfectScrollbar>
     </main>
   )
 }
