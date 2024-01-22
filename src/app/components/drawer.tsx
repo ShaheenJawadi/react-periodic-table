@@ -89,7 +89,7 @@ const BottomDrawer=()=>{
                             </div>
 
                             <div className="name"  >
-                                {drawerData.name}
+                                {drawerData?.name}
                             </div>
                         
 
