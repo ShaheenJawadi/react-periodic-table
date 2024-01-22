@@ -9,7 +9,6 @@ import SliderMode from './components/sliderMode'
 import BottomDrawer from './components/drawer'
 import { useDisplaytValues } from './context/useContext'
  
-
 export default function Home() {
 
   let { showDrawer } = useDisplaytValues();
@@ -17,8 +16,8 @@ export default function Home() {
   return (
     <main className={styles.main}>
 
-        
-        <>
+       
+    
       
         <div  className="periodicTable" >
           {
@@ -40,9 +39,8 @@ export default function Home() {
     
         </div> 
           {showDrawer && <BottomDrawer />  }
+ 
 
-        </>
-  
     </main>
   )
 }

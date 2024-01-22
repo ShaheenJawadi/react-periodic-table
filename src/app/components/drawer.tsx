@@ -3,7 +3,8 @@ import   '@google/model-viewer';
 import  { ModelViewerElement } from '@google/model-viewer';
 import { useDisplaytValues } from '../context/useContext';
 import { elemntBg } from '../utils';
-
+import PerfectScrollbar from 'react-perfect-scrollbar'
+import "react-perfect-scrollbar/dist/css/styles.css";
 declare global {
     namespace JSX {
         interface IntrinsicElements {
@@ -69,65 +70,66 @@ const BottomDrawer=()=>{
                         {drawerData?.image.title} 
                     </div>
 
-                </div>
-                    <div className='elementData' >
-                        <div className='elementBoxName' >
-                        <div className="element" style={{ background: elemntBg({ section: "", paramesters: undefined }, drawerData) }} >
+                </div>    
+                    <div className='elementData' >     
+                        <PerfectScrollbar  >
+                            <div className='elementBoxName' >
+                            <div className="element" style={{ background: elemntBg({ section: "", paramesters: undefined }, drawerData) }} >
 
 
-                            <div className="topBox">
-                                <div className="atomicNumber">
-                                    {drawerData.number}
+                                <div className="topBox">
+                                    <div className="atomicNumber">
+                                        {drawerData.number}
+                                    </div>
+                                    <div className="atomicWeight">
+                                        {drawerData.atomic_mass.toFixed(3)}
+                                    </div>
                                 </div>
-                                <div className="atomicWeight">
-                                    {drawerData.atomic_mass.toFixed(3)}
+
+                                <div className="symbol">
+                                    {drawerData.symbol}
                                 </div>
-                            </div>
 
-                            <div className="symbol">
-                                {drawerData.symbol}
-                            </div>
-
-                            <div className="name"  >
-                                {drawerData?.name}
-                            </div>
-                        
-
-                        </div>
-                            <div className='elementName' >
-                                {drawerData?.name}
-                            </div>
-                      
+                                <div className="name"  >
+                                    {drawerData?.name}
+                                </div>
                             
-                        </div>
-                        <div className='elementSummary' >
-                         
-                            <div className='summary' >
-                                <p>
-                                         {drawerData?.summary}
-                                </p>
-                                <div className='disData' > 
-                                {data.map((value, index )=>{
-                                    return (
-                                        <div key={index} className='single'>
-                                            {value.title}:<strong>{drawerData?.[value.value]}</strong>
 
-                                        </div>
-                                    )
-                                })
-                                }
-
-                                <div   className='single' >
-                                    
-                                    Source<strong><a href={drawerData?.source} target="_blank" rel="noopener noreferrer">Wikipedia</a></strong>
-
+                            </div>
+                                <div className='elementName' >
+                                    {drawerData?.name}
                                 </div>
-                               
+                        
+                                
+                            </div>
+                            <div className='elementSummary' >
+                            
+                                <div className='summary' >
+                                    <p>
+                                            {drawerData?.summary}
+                                    </p>
+                                    <div className='disData' > 
+                                    {data.map((value, index )=>{
+                                        return (
+                                            <div key={index} className='single'>
+                                                {value.title}:<strong>{drawerData?.[value.value]}</strong>
+
+                                            </div>
+                                        )
+                                    })
+                                    }
+
+                                    <div   className='single' >
+                                        
+                                        Source<strong><a href={drawerData?.source} target="_blank" rel="noopener noreferrer">Wikipedia</a></strong>
+
+                                    </div>
+                                
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                        
-                   
+                        </PerfectScrollbar>
               
                     </div>
 
