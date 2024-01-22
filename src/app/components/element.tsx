@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useDisplaytValues } from "../context/useContext";
 import { categoryColors, matterPhase } from "../data";
 import { ElementDataType } from "../types";
@@ -11,6 +12,7 @@ export const SingleElement=(props:Props)=>{
 
     const { element}=props ; 
     const {displayTable ,openDrawer }=useDisplaytValues()
+    const [hover , setHover ]= useState<boolean>(false);
  
  
 
@@ -18,11 +20,12 @@ export const SingleElement=(props:Props)=>{
  
 
     return(
-      <div onClick={() => openDrawer(element)} style={{gridColumn:element.xpos,gridRow:element.ypos  }} >
+      <div onClick={() => openDrawer(element)} style={{gridColumn:element.xpos,gridRow:element.ypos, position:"relative"  }} >
           {
             displayTable.section=="image" ?
             
-            <img src={element.image.url} 
+            // eslint-disable-next-line @next/next/no-img-element
+            <img onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}  src={element.image.url} 
               alt={element.image.title} 
               about={element.image.attribution} 
               className="element" /> :
@@ -49,6 +52,12 @@ export const SingleElement=(props:Props)=>{
  
             </div>  
           }
+          {(displayTable.section == "image" && hover )&&
+            <div className="namePopup">{element.name}</div>
+          }
+          <div>
+
+          </div>
           
          
         

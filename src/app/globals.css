@@ -259,7 +259,7 @@ font-size: 10px;
   max-height: 300px;
   overflow-y: auto; 
 }
-
+ 
 .drawerContainer .content .elementData .elementName {
  
   font-size: 20px;
@@ -355,3 +355,17 @@ margin-left: 12px;
   text-align: center;
   max-width: 190px;
 }
+
+.periodicTable .namePopup{
+    position: absolute;
+      background: #565656;
+      font-size: 14px;
+      padding: 3px 4px;
+      border-radius: 5px;
+      color: #fff;
+      font-weight: 700;
+      left: 0;
+      z-index: 999;
+      top: 100%;
+}
+ 
