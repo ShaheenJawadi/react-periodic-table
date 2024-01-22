@@ -14,7 +14,42 @@ declare global {
 
 
 const BottomDrawer=()=>{
-    const { closeDrawer ,drawerData } = useDisplaytValues()
+    const { closeDrawer ,drawerData } = useDisplaytValues();
+    const data =[
+        {
+            title: "Category",
+            value: "category",
+        }, {
+        title:"Group" , 
+            value:"group",
+    }, {
+            title: "Period",
+            value: "period",
+        }, {
+            title: "Block",
+            value: "block",
+        }, {
+            title: "Atomic number",
+            value: "number",
+        }, {
+            title: "Electron configuration",
+            value: "electron_configuration_semantic",
+        }, {
+            title: "Melting point",
+            value: "melt",
+        }, {
+            title: "Boiling point",
+            value: "boil",
+        }, {
+            title: "State at 20°C",
+            value: "phase",
+        }, {
+            title: "Atomic mass",
+            value: "atomic_mass",
+        }, {
+            title: "Density",
+            value: "density",
+        }]
     return (
         
         <div  className="drawerContainer">
@@ -55,13 +90,30 @@ const BottomDrawer=()=>{
                       
                             
                         </div>
-                        <div className='elemntSummary' >
+                        <div className='elementSummary' >
                          
                             <div className='summary' >
                                 <p>
                                          {drawerData?.summary}
                                 </p>
-                           
+                                <div className='disData' > 
+                                {data.map((value, index )=>{
+                                    return (
+                                        <div key={index} className='single'>
+                                            {value.title}:<strong>{drawerData?.[value.value]}</strong>
+
+                                        </div>
+                                    )
+                                })
+                                }
+
+                                <div   className='single' >
+                                    
+                                    Source<strong><a href={drawerData?.source} target="_blank" rel="noopener noreferrer">Wikipedia</a></strong>
+
+                                </div>
+                               
+                                </div>
                             </div>
                         </div>
                        

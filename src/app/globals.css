@@ -270,7 +270,7 @@ font-size: 10px;
     align-items: center;
     justify-content: center;
 }
-.drawerContainer .content .elementData .elemntSummary{
+.drawerContainer .content .elementData .elementSummary{
  
     margin-top: 10px;
    
@@ -323,11 +323,24 @@ font-size: 10px;
 
 
 
-.drawerContainer .content .elementData .elemntSummary .summary{
+.drawerContainer .content .elementData .elementSummary .summary{
 color: #fff;
 margin-left: 12px;
 }
 
+.drawerContainer .content .elementData .elementSummary .disData{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+.drawerContainer .content .elementData .elementSummary .disData  .single {
+  flex: 30%;
+  padding: 5px;
+  font-size: 14px;
+}
+.drawerContainer .content .elementData .elementSummary .disData .single:nth-child(odd){
+  background: #62626969;
+}
 .drawerContainer .content .elementImage img {
   width: 200px;
   height: 200px;
