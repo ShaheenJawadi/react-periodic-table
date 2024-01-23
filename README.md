@@ -1,36 +1,97 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# React Periodic Table
 
+
+This app is developed using Next.js and provides a user-friendly interface to explore the elements of the periodic table in three different modes: Chemical Group Block, Element Images, and CPK Convention. Additionally, users can categorize elements based on their properties such as Noble Gas, Alkali Metal, and more. The app also includes a temperature simulation feature, allowing users to observe state changes at different temperatures.
+
+## Features
+
+1. **Chemical Group Block Mode:** Explore elements based on their chemical group block in the periodic table.
+
+2. **Element Images Mode:** View elements using visual representations for easy identification.
+
+3. **CPK Convention Mode:** Visualize elements according to the CPK (Corey-Pauling-Koltun) convention.
+
+4. **Bohr Model 3D Visualization:** Get a detailed 3D visualization of the atom in the Bohr model when viewing element details.
+
+5. **Categories:** Categorize elements into groups such as Noble Gas, Alkali Metal, and more.
+
+6. **Temperature simulation:** Visualize how elements change state (solid, liquid, gas) with varying temperatures
 ## Getting Started
 
-First, run the development server:
+ 1. Clone the repository:
+ 
+```Bash
+git clone https://github.com/ShaheenJawadi/react-periodic-table.git
+```
+2. Install dependencies:
+```Bash
+cd react-periodic-table
+npm install
+``` 
+or
+```Bash
+cd react-periodic-table
+yarn
+```
+3. Start the development server:
 
-```bash
+```Bash
 npm run dev
-# or
+```
+or
+```Bash
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+ 
+4. Open the app in your browser: `http://localhost:3000`
+## Usage
+
+- Select a viewing mode from the dropdown menu.
+- Explore elements by clicking on them to view their details.
+- In element details, experience a detailed 3D visualization of the atom in the Bohr model.
+- Adjust the temperature slider to see how elements change state.
+
+## Contributing
+
+If you'd like to contribute to the project, please follow these steps:
+
+1. Fork the repository.
+2. Clone your forked repository:
+```Bash
+git clone https://github.com/your-username/react-periodic-table.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Create a new branch for your feature or bug fix:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```Bash
+git checkout -b feature/new-feature
+```
 
-## Learn More
+4. Make your changes and commit them:
 
-To learn more about Next.js, take a look at the following resources:
+```Bash
+git commit -m "Add new feature"
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. Push your changes to your fork:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```Bash
+git push origin feature/new-feature
+```
 
-## Deploy on Vercel
+6. Open a pull request to the main repository.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Acknowledgments
+
+Element information and properties in this app are sourced from the comprehensive [Periodic-Table-JSON](https://github.com/Bowserinator/Periodic-Table-JSON) repository. Some data has been processed and formatted for optimal display and functionality within this project.
+
+We extend our gratitude to the contributors of the [Periodic-Table-JSON](https://github.com/Bowserinator/Periodic-Table-JSON)  project for making this data available for educational and development purposes.
+
+
+## License
+
+This project is licensed under the  [`MIT License`](https://github.com/ShaheenJawadi/react-periodic-table/blob/main/LICENSE).
+
+Feel free to explore and enjoy the React Periodic Table! If you have any questions or issues, please don't hesitate to reach out. Happy exploring!
