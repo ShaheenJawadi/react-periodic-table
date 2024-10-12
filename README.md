@@ -3,6 +3,7 @@
 
 This app is developed using Next.js and provides a user-friendly interface to explore the elements of the periodic table in three different modes: Chemical Group Block, Element Images, and CPK Convention. Additionally, users can categorize elements based on their properties such as Noble Gas, Alkali Metal, and more. The app also includes a temperature simulation feature, allowing users to observe state changes at different temperatures.
 
+![screenshot](/screenshots/1.png?raw=true "screenshot")
 ## Features
 
 1. **Chemical Group Block Mode:** Explore elements based on their chemical group block in the periodic table.
