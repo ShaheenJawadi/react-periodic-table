@@ -1,12 +1,13 @@
 "use client";
-
-import   '@google/model-viewer';
+ 
 import  { ModelViewerElement } from '@google/model-viewer';
 import { useDisplaytValues } from '../context/useContext';
 import { elemntBg } from '../utils';
 import PerfectScrollbar from 'react-perfect-scrollbar'
 import "react-perfect-scrollbar/dist/css/styles.css";
 import { ElementDataType } from '../types';
+import { useEffect } from 'react';
+
 declare global {
     namespace JSX {
         interface IntrinsicElements {
@@ -17,6 +18,7 @@ declare global {
 
 
 const BottomDrawer=()=>{
+    useEffect(() => { import('@google/model-viewer').catch(console.error); }, []);
     const { closeDrawer ,drawerData } = useDisplaytValues();
     const data =[
         {
