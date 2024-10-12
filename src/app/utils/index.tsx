@@ -30,7 +30,7 @@ export const elemntBg=( display:DisplayTable  , element:ElementDataType)=>{
         }
     }
     else
-        return  categoryColors[element.category] ; 
+        return  categoryColors?.[element.category as keyof typeof categoryColors]; 
 }
 
 export const tempConversion =(k:number , to :"C" |"F")=>{

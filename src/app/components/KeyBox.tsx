@@ -20,7 +20,7 @@ const KeyBox=()=> {
                   {Object.keys(categoryColors).map((key , index) => 
                     {return(
                       <div  key={index} onClick={()=>setDisplayTable({section:"category" , paramesters:key})} className="single">
-                        <div className="categoryColor" style={{ background:categoryColors[key]}}></div>
+                        <div className="categoryColor" style={{ background:categoryColors[key as keyof typeof categoryColors]}}></div>
                         <div className="category">{key}</div>
                   
                       </div>
@@ -35,9 +35,9 @@ const KeyBox=()=> {
     
         <div className="matterPhase" >
 
-        {Object.keys(matterPhase).map(key => 
+        {Object.keys(matterPhase).map((key,index) => 
                 {return(
-                  <div className="single"  style={{ background:matterPhase[key] ||""}}>
+                  <div key={index} className="single"  style={{ background:matterPhase[key as keyof typeof matterPhase] ||""}}>
                     {key} 
                   
                   </div>

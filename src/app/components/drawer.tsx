@@ -1,3 +1,4 @@
+"use client";
 
 import   '@google/model-viewer';
 import  { ModelViewerElement } from '@google/model-viewer';
@@ -5,6 +6,7 @@ import { useDisplaytValues } from '../context/useContext';
 import { elemntBg } from '../utils';
 import PerfectScrollbar from 'react-perfect-scrollbar'
 import "react-perfect-scrollbar/dist/css/styles.css";
+import { ElementDataType } from '../types';
 declare global {
     namespace JSX {
         interface IntrinsicElements {
@@ -65,6 +67,7 @@ const BottomDrawer=()=>{
 
             <div className='content' >
                 <div className='elementImage' >
+                    
                     <img src={drawerData?.image.url} alt={drawerData?.image?.attribution} />
                     <div className='title'>
                         {drawerData?.image.title} 
@@ -74,20 +77,20 @@ const BottomDrawer=()=>{
                     <div className='elementData' >     
                         <PerfectScrollbar  >
                             <div className='elementBoxName' >
-                            <div className="element" style={{ background: elemntBg({ section: "", paramesters: undefined }, drawerData) }} >
+                            <div className="element" style={{ background: elemntBg({ section: "", paramesters: undefined }, drawerData as ElementDataType) }} >
 
 
                                 <div className="topBox">
                                     <div className="atomicNumber">
-                                        {drawerData.number}
+                                        {drawerData?.number}
                                     </div>
                                     <div className="atomicWeight">
-                                        {drawerData.atomic_mass.toFixed(3)}
+                                        {drawerData?.atomic_mass.toFixed(3)}
                                     </div>
                                 </div>
 
                                 <div className="symbol">
-                                    {drawerData.symbol}
+                                    {drawerData?.symbol}
                                 </div>
 
                                 <div className="name"  >
@@ -112,7 +115,7 @@ const BottomDrawer=()=>{
                                     {data.map((value, index )=>{
                                         return (
                                             <div key={index} className='single'>
-                                                {value.title}:<strong>{drawerData?.[value.value]}</strong>
+                                                {value.title}:<strong>{drawerData?.[value.value as string]}</strong>
 
                                             </div>
                                         )
